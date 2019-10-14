@@ -57,16 +57,16 @@ site_install ()
 	echo "Downloading Backdrop Drush Commands..."
 	sudo git clone https://github.com/backdrop-contrib/drush.git ~/.drush/backdrop > /dev/null
 
-	# Could switch to install.sh until 
-	# https://github.com/backdrop-contrib/drush/issues/195 is resolved.
 	 drush si standard \
 	 -y \
-	 --site-name='My AltaGrade Backdrop Site' \
+	 --site-name='AltaGrade Development Stack' \
 	 --db-url='mysqli://user:user@db/default' \
 	 --account-mail="admin@example.com" \
 	 --account-name="admin" \
 	 --account-pass="admin" || true
 
+	# Alternative way to switch to until 
+	# https://github.com/backdrop-contrib/drush/issues/195 is resolved.
 	# cd $DOCROOT_PATH
 	# ./core/scripts/install.sh \
   	# --db-url='mysql://user:user@db/default' \
@@ -74,7 +74,7 @@ site_install ()
 	# --account-name="admin" \
 	# --account-pass="admin" \
 	# --site-mail="admin@example.com" \
-  	# --site-name='My AltaGrade Backdrop Site' > /dev/null 2>&1 &
+  	# --site-name='AltaGrade Development Stack' > /dev/null 2>&1 &
 
 	# Currently a way to set password at runtime with drush site-install
 	drush upwd admin --password=admin > /dev/null
