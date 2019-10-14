@@ -36,7 +36,8 @@ sleep 10
 # Download Backdrop
 echo-green "Downloading the latest development branch of Backdrop ..."
 cd $PROJECT_ROOT
-git clone https://github.com/backdrop/backdrop.git docroot
+#git clone https://github.com/backdrop/backdrop.git docroot
+git clone --branch 1.14.1 https://github.com/backdrop-contrib/devel.git 
 
 # Site initialization
 echo -e "${green_bg} Step 2 ${NC}${green} Initializing site...${NC}"
