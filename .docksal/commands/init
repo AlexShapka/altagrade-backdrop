@@ -34,7 +34,7 @@ echo "Waiting 10s for MySQL to initialize...";
 sleep 10
 
 # Download Backdrop
-echo "Downloading the latest development branch of Backdrop ..."
+echo-green "Downloading the latest development branch of Backdrop ..."
 cd $PROJECT_ROOT
 git clone https://github.com/backdrop/backdrop.git docroot
 
