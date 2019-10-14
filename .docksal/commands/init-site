@@ -90,10 +90,21 @@ time site_install
 
 #-------------------------- END: Execution --------------------------------
 
+#-------------------------- Preparing bash --------------------------------
+
+sed -i 's/#force_color_prompt=yes/force_color_prompt=yes/g' ~/.bashrc
+sed -i 's/#alias /alias /g' ~/.bashrc
+source  ~/.bashrc
+
+#-------------------------- END: Preparing bash ---------------------------
+
 #-------------------------- Development modules ---------------------------
-cd $DOCROOT_PATH
-drush dl devel && drush en devel
-drush dl demo && drush en demo
-drush dl search_krumo && drush en search_krumo
+cd $DOCROOT_PATH/modules
+git clone https://github.com/backdrop-contrib/devel.git
+git clone https://github.com/backdrop-contrib/demo.git
+git clone https://github.com/AlexShapka/search_krumo.git
+drush -y en devel
+drush -y en demo
+drush -y en search_krumo
 #-------------------------- END: Development modules ----------------------
 
