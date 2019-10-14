@@ -102,11 +102,13 @@ source  ~/.bashrc
 cd $DOCROOT_PATH/modules
 git clone https://github.com/backdrop-contrib/demo.git
 git clone https://github.com/AlexShapka/search_krumo.git
+git clone https://github.com/backdrop-contrib/devel.git --branch 1.x-1.7.0
+
 # Unfortunately, cloned git is giving error, so we have to download .zip
-wget https://github.com/backdrop-contrib/devel/archive/1.x-1.7.0.zip
-unzip -qq 1.x-1.7.0.zip 
-rm -rf 1.x-1.7.0.zip
-mv devel-* devel
+# wget https://github.com/backdrop-contrib/devel/archive/1.x-1.7.0.zip
+# unzip -qq 1.x-1.7.0.zip 
+# rm -rf 1.x-1.7.0.zip
+# mv devel-* devel
 
 drush -y en devel
 drush -y en demo
