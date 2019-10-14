@@ -58,22 +58,24 @@ site_install ()
 	sudo git clone https://github.com/backdrop-contrib/drush.git ~/.drush/backdrop > /dev/null
 
 	# We disable email sending here so site-install does not return an error
-	php -d sendmail_path=/bin/true /usr/local/bin/drush site-install \
-		-y \
-		--site-name='My AltaGrade Backdrop Site' \
-		--db-url='mysql://user:user@db/default' \
-		--account-mail="admin@example.com" \
-		--account-name="admin" \
-		--account-pass="admin" || true
+	# Switch to install.sh as https://github.com/backdrop-contrib/drush/issues/195
+	# being resolved.
+	# drush si standard \
+	# -y \
+	# --site-name='My AltaGrade Backdrop Site' \
+	# --db-url='mysql://user:user@db/default' \
+	# --account-mail="admin@example.com" \
+	# --account-name="admin" \
+	# --account-pass="admin" || true
 
-	#cd $DOCROOT_PATH
-	#./core/scripts/install.sh \
-  #--db-url='mysql://user:user@db/default' \
-	#--account-mail="admin@example.com" \
-	#--account-name="admin" \
-	#--account-pass="admin" \
-	#--site-mail="admin@example.com" \
-  #--site-name='My AltaGrade Backdrop Site' > /dev/null 2>&1 &
+	cd $DOCROOT_PATH
+	./core/scripts/install.sh \
+  	--db-url='mysql://user:user@db/default' \
+	--account-mail="admin@example.com" \
+	--account-name="admin" \
+	--account-pass="admin" \
+	--site-mail="admin@example.com" \
+  	--site-name='My AltaGrade Backdrop Site' > /dev/null 2>&1 &
 
 	# Currently a way to set password at runtime with drush site-install
 	drush upwd admin --password=admin > /dev/null
