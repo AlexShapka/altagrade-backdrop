@@ -4,11 +4,17 @@ This repository helps to quickly get the latest development branch of Backdrop r
 ## Installation
 
 - Install Docksal per https://docksal.io/installation if you haven't already done it.
-- Go to your ~/Projects, clone the repository and run the installation script:
 
+- Go to your ~/Projects, clone the repository and run the installation script:
 ```
 git clone git@github.com:AlexShapka/altagrade-backdrop.git your-new-project
 cd your-new-project
+```
+
+- If you want to install the last stable version instead of the development branch, then open the `.docksal/commands/init` file and replace `git clone https://github.com/backdrop/backdrop.git docroot` with `git clone --branch 1.14.1 https://github.com/backdrop-contrib/devel.git docroot`
+
+- Finally, run the installation scipt:
+```
 ./init
 ```
 
