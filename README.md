@@ -11,12 +11,14 @@ git clone git@github.com:AlexShapka/altagrade-backdrop.git your-new-project
 cd your-new-project
 ```
 
-- If you prefer stable version over the development branch, then open the `.docksal/commands/init` file, comment out the `git clone https://github.com/backdrop/backdrop.git docroot` line and uncomment two lines just after it like so:
+- If you prefer the development branch over the stable version, then open the `.docksal/commands/init` file, comment out two lines under STABLE and uncoment the git line under DEVELPMENT like so:
 
 ```
-# git clone https://github.com/backdrop/backdrop.git docroot
-STABLE=`curl -s "https://api.github.com/repos/backdrop/backdrop/releases/latest" | awk -F '"' '/tag_name/{print $4}'`
-git clone --branch $STABLE https://github.com/backdrop/backdrop.git docroot
+# STABLE
+# BRANCH=`curl -s "https://api.github.com/repos/backdrop/backdrop/releases/latest" | awk -F '"' '/tag_name/{print $4}'`
+# git clone --branch $BRANCH https://github.com/backdrop/backdrop.git docroot
+# DEVELOPMENT
+git clone https://github.com/backdrop/backdrop.git docroot
 ```
 
 - Finally, run the installation scipt:
