@@ -14,3 +14,13 @@ git clone git@github.com:AlexShapka/altagrade-backdrop.git your-new-project
 cd your-new-project
 ./init
 ```
+
+4. Start working with your website at http://your-new-project.docksal
+
+5. Webmail is located at http://mail.your-new-project.docksal
+
+6. phpMyAdmin is located at http://pma.your-new-project.docksal
+
+# Trobleshooting
+
+Report all errors and issues on https://github.com/AlexShapka/altagrade-backdrop/issues.
