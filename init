@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+mv stack-altagrade.yml ~/.docksal/stacks/
+fin init
+rm -rf init
