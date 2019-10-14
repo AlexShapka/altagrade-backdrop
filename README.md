@@ -15,11 +15,11 @@ cd your-new-project
 ./init
 ```
 
-4. Start working with your website at http://your-new-project.docksal
+4. Go to http://your-new-project.docksal/user, login with username `admin`, password `admin` and start working with your website.
 
-5. Webmail is located at http://mail.your-new-project.docksal
+5. MailHog located is a cool way of catching all messages sent out from your website while developing it. To test it just enable the contact module with `drush en contact`, send a test message using the http://musa.docksal/contact form and check you MailHog at http://mail.your-new-project.docksal.
 
-6. phpMyAdmin is located at http://pma.your-new-project.docksal
+6. phpMyAdmin is located at http://pma.your-new-project.docksal.
 
 # Trobleshooting
 
