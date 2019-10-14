@@ -3,7 +3,7 @@ This repository helps to quickly get the latest development branch of Backdrop r
 
 ## Installation
 
-1. Install Docksal per https://docksal.io/installation if you don't already have it.
+1. Install Docksal per https://docksal.io/installation if you haven't already done it.
 2. Go to your ~/Projects folder and clone the repository with:
 
 ```
