@@ -89,3 +89,11 @@ fix_permissions
 time site_install
 
 #-------------------------- END: Execution --------------------------------
+
+#-------------------------- Development modules ---------------------------
+cd $DOCROOT_PATH
+drush dl devel && drush en devel
+drush dl demo && drush en demo
+drush dl search_krumo && drush en search_krumo
+#-------------------------- END: Development modules ----------------------
+
