@@ -3,25 +3,22 @@ This repository helps to quickly get the latest development branch of Backdrop r
 
 ## Installation
 
-1. Install Docksal per https://docksal.io/installation if you haven't already done it.
-2. Go to your ~/Projects folder and clone the repository with:
+- Install Docksal per https://docksal.io/installation if you haven't already done it.
+- Go to your ~/Projects, clone the repository and run the installation script:
 
 ```
 git clone git@github.com:AlexShapka/altagrade-backdrop.git your-new-project
-```
-
-3. Change working directory and run the initiation script:
-
-```
 cd your-new-project
 ./init
 ```
 
-4. Go to http://your-new-project.docksal/user, login with username `admin`, password `admin` and start working with your website.
+- Go to http://your-new-project.docksal/user, login with username `admin`, password `admin` and start working with your website.
 
-5. MailHog is a cool way of catching all messages sent out from your website while developing it. To test it just enable the contact module with `drush en contact`, send a test message using the http://your-new-project.docksal/contact form and check your MailHog at http://mail.your-new-project.docksal.
+## Additional plugins
 
-6. phpMyAdmin is located at http://pma.your-new-project.docksal.
+- MailHog is a cool way of catching all messages sent out from your website while developing it. To test it just enable the contact module with `drush en contact`, send a test message using the http://your-new-project.docksal/contact form and check your MailHog at http://mail.your-new-project.docksal.
+
+- phpMyAdmin is located at http://pma.your-new-project.docksal.
 
 ## Versions
 
