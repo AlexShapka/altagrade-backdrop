@@ -1,6 +1,8 @@
 # AltaGrade Development Stack for Backdrop
 This repository helps to quickly get the latest development branch of Backdrop running on Docksal.
 
+## Installation
+
 1. Install Docksal per https://docksal.io/installation if you don't already have it.
 2. Go to your ~/Projects folder and clone the repository with:
 
@@ -21,14 +23,14 @@ cd your-new-project
 
 6. phpMyAdmin is located at http://pma.your-new-project.docksal.
 
-# Versions
+## Versions
 
-AltaGrade Development Stack is deployed with the following software versions by default:
+**AltaGrade Development Stack** is deployed with the following software versions by default:
 
-Apache 2.4
-MySQL 5.6
-PHP 7.2
+- Apache 2.4
+- MySQL 5.6
+- PHP 7.2
 
-# Trobleshooting
+## Trobleshooting
 
 Report all errors and issues on https://github.com/AlexShapka/altagrade-backdrop/issues.
