@@ -34,13 +34,13 @@ echo "Waiting 10s for MySQL to initialize...";
 sleep 10
 
 # Download Backdrop
-echo-green "Downloading the latest development branch of Backdrop ..."
 cd $PROJECT_ROOT
-# Development branch
-# git clone https://github.com/backdrop/backdrop.git docroot
 # Stable version
 STABLE=`curl -s "https://api.github.com/repos/backdrop/backdrop/releases/latest" | awk -F '"' '/tag_name/{print $4}'`
 git clone --branch $STABLE https://github.com/backdrop/backdrop.git docroot
+# Development branch
+# git clone https://github.com/backdrop/backdrop.git docroot
+echo-green "Downloading Backdrop ..."
 
 # Site initialization
 echo -e "${green_bg} Step 2 ${NC}${green} Initializing site...${NC}"
