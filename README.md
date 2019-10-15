@@ -11,7 +11,7 @@ Docksal is a web-development environment based on Docker for macOS, Windows and 
 
 - On command line change working directory to projects folder, for example `cd ~/Projects`, and clone the repository:
 ```
-git clone git@github.com:AlexShapka/altagrade-backdrop.git your-new-project
+git clone https://github.com/altagrade/altagrade-backdrop.git your-new-project
 cd your-new-project
 ```
 
@@ -54,4 +54,4 @@ AltaGrade Development Stack is deployed with the following software versions by 
 
 ## Trobleshooting
 
-Report all errors and issues on https://github.com/AlexShapka/altagrade-backdrop/issues.
+Report all errors and issues on https://github.com/altagrade/altagrade-backdrop/issues.
