@@ -107,16 +107,14 @@ source  ~/.bashrc
 #-------------------------- END: Preparing bash ---------------------------
 
 #-------------------------- Development modules ---------------------------
-cd $DOCROOT_PATH
-php /usr/src/b/b.php dl devel && php /usr/src/b/b.php en devel
-php /usr/src/b/b.php dl demo && php /usr/src/b/b.php en demo
-php /usr/src/b/b.php dl search_krumo && php /usr/src/b/b.php en search_krumo
 
-#git clone https://github.com/backdrop-contrib/demo.git
-#git clone https://github.com/AlexShapka/search_krumo.git
-#git clone https://github.com/backdrop-contrib/devel.git --branch 1.x-1.7.0
-#drush -y en devel
-#drush -y en demo
-#drush -y en search_krumo
+cd $DOCROOT_PATH
+yes | php /usr/src/b/b.php pm-download devel 
+yes | php /usr/src/b/b.php pm-enable devel
+yes | php /usr/src/b/b.php pm-download demo
+yes | php /usr/src/b/b.php pm-enable demo
+yes | php /usr/src/b/b.php pm-download search_krumo
+yes | php /usr/src/b/b.php pm-enable search_krumo
+
 #-------------------------- END: Development modules ----------------------
 
