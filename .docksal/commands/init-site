@@ -89,6 +89,10 @@ fix_permissions
 time site_install
 
 #-------------------------- END: Execution --------------------------------
+cd /usr/src
+sudo git clone https://github.com/backdrop-contrib/b.git
+echo "alias b='php /usr/src/b/b.php'" >> ~/.bashrc
+source ~/.bashrc
 
 #-------------------------- Preparing bash --------------------------------
 
