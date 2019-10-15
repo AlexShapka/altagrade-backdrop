@@ -1,7 +1,7 @@
 # AltaGrade Development Stack for Backdrop
 This repository helps to quickly get the latest development branch of Backdrop running on Docksal. 
 
-**AltaGrade Development Stack** comes with **Backdrop Console**, a command line utility for Backdrop CMS developers aimed at speeding up your development cycles.
+AltaGrade Development Stack comes with *Backdrop Console*, a command line utility for Backdrop CMS developers aimed at speeding up your development cycles.
 
 ## Requirements
 
@@ -39,11 +39,14 @@ git clone https://github.com/backdrop/backdrop.git docroot
 
 ## Commnad line utilities
 
-You can  manage your Backdrop website on command line using **Backdrop Console** (https://backdropcms.org/project/b) or **Drush** (https://backdropcms.org/project/drush).
+You can  manage your Backdrop website on command line using:
+
+- Backdrop Console (https://backdropcms.org/project/b) 
+- Drush (https://backdropcms.org/project/drush).
 
 ## Stack component versions
 
-**AltaGrade Development Stack** is deployed with the following software versions by default:
+AltaGrade Development Stack is deployed with the following software versions by default:
 
 - Apache 2.4
 - MySQL 5.6
