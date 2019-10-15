@@ -82,19 +82,21 @@ site_install ()
 
 #-------------------------- END: Functions --------------------------------
 
-#-------------------------- Execution --------------------------------
+#--------------------- Installing Backdrop Console ------------------------
+echo "Installing Backdrop Console ..."
+sudo git clone https://github.com/backdrop-contrib/b.git /usr/src/b
+echo "alias b='php /usr/src/b/b.php'" >> ~/.bashrc
+source ~/.bashrc
+#--------------------- END: Installing Backdrop Console -------------------
+
+
+#------------------------------- Execution --------------------------------
 
 # Project initialization steps
 fix_permissions
 time site_install
 
 #-------------------------- END: Execution --------------------------------
-
-echo 'Installing Backdrop Console ...'
-cd /usr/src
-sudo git clone https://github.com/backdrop-contrib/b.git
-echo "alias b='php /usr/src/b/b.php'" >> ~/.bashrc
-source ~/.bashrc
 
 #-------------------------- Preparing bash --------------------------------
 
@@ -105,11 +107,14 @@ source  ~/.bashrc
 #-------------------------- END: Preparing bash ---------------------------
 
 #-------------------------- Development modules ---------------------------
-#cd $DOCROOT_PATH/modules
+cd $DOCROOT_PATH
+b dl devel && b en devel
+b dl demo && b en demo
+b dl search_krumo b en search_krumo
+
 #git clone https://github.com/backdrop-contrib/demo.git
 #git clone https://github.com/AlexShapka/search_krumo.git
 #git clone https://github.com/backdrop-contrib/devel.git --branch 1.x-1.7.0
-
 #drush -y en devel
 #drush -y en demo
 #drush -y en search_krumo
