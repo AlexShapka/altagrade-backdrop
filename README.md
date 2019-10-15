@@ -1,5 +1,7 @@
 # AltaGrade Development Stack for Backdrop
-This repository helps to quickly get the latest development branch of Backdrop running on Docksal.
+This repository helps to quickly get the latest development branch of Backdrop running on Docksal. 
+
+**AltaGrade Development Stack** comes with **Backdrop Console**, a command line utility for Backdrop CMS developers aimed at speeding up your development cycles.
 
 ## Requirements
 
@@ -27,15 +29,19 @@ git clone https://github.com/backdrop/backdrop.git docroot
 ./init
 ```
 
-- Go to http://your-new-project.docksal/user, login with username `admin`, password `admin` and start working with your new Backdrop website. You can also manage your Backdrop website on command line using Backdrop Console (https://backdropcms.org/project/b) or Drush (https://backdropcms.org/project/drush).
+- Go to http://your-new-project.docksal/user, login with username `admin`, password `admin` and start working with your new Backdrop website. 
 
-## Installed Docksal tools
+## Docksal tools
 
 - MailHog is a cool way of catching all messages sent out from your website while developing it. To test it just enable the contact module with `drush en contact`, send a test message using the http://your-new-project.docksal/contact form and check your MailHog at http://mail.your-new-project.docksal.
 
 - phpMyAdmin is located at http://pma.your-new-project.docksal.
 
-## Installed stack component versions
+## Commnad line utilities
+
+You can  manage your Backdrop website on command line using **Backdrop Console** (https://backdropcms.org/project/b) or **Drush** (https://backdropcms.org/project/drush).
+
+## Stack component versions
 
 **AltaGrade Development Stack** is deployed with the following software versions by default:
 
