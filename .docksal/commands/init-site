@@ -108,9 +108,9 @@ source  ~/.bashrc
 
 #-------------------------- Development modules ---------------------------
 cd $DOCROOT_PATH
-b dl devel && b en devel
-b dl demo && b en demo
-b dl search_krumo b en search_krumo
+php /usr/src/b/b.php dl devel && php /usr/src/b/b.php en devel
+php /usr/src/b/b.php dl demo && php /usr/src/b/b.php en demo
+php /usr/src/b/b.php dl search_krumo && php /usr/src/b/b.php en search_krumo
 
 #git clone https://github.com/backdrop-contrib/demo.git
 #git clone https://github.com/AlexShapka/search_krumo.git
