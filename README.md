@@ -1,18 +1,19 @@
 # AltaGrade Development Stack for Backdrop
 This repository helps to quickly get the latest development branch of Backdrop running on Docksal.
 
+## Requirements
+
+Docksal is a web-development environment based on Docker for macOS, Windows and Ubuntu Linux. Install Docksal per https://docksal.io/installation.
+
 ## Installation
 
-- Install Docksal per https://docksal.io/installation if you haven't already done it.
-
-- Go to your ~/Projects, clone the repository and run the installation script:
+- On command line change working directory to projects folder, for example `cd ~/Projects`, and clone the repository:
 ```
 git clone git@github.com:AlexShapka/altagrade-backdrop.git your-new-project
 cd your-new-project
 ```
 
-- If you prefer the development branch over the stable version, then open the `.docksal/commands/init` file, comment out two lines under STABLE and uncoment the git line under DEVELPMENT like so:
-
+- If you prefer the development branch over the stable version, then open the `.docksal/commands/init` file, comment out two lines under STABLE and uncomment the git line under DEVELOPMENT as shown below:
 ```
 # STABLE
 # BRANCH=`curl -s "https://api.github.com/repos/backdrop/backdrop/releases/latest" | awk -F '"' '/tag_name/{print $4}'`
@@ -26,7 +27,7 @@ git clone https://github.com/backdrop/backdrop.git docroot
 ./init
 ```
 
-- Go to http://your-new-project.docksal/user, login with username `admin`, password `admin` and start working with your website.
+- Go to http://your-new-project.docksal/user, login with username `admin`, password `admin` and start working with your new Backdrop website.
 
 ## Additional plugins
 
