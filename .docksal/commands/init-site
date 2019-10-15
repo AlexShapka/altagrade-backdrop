@@ -109,12 +109,12 @@ source  ~/.bashrc
 #-------------------------- Development modules ---------------------------
 
 cd $DOCROOT_PATH
-yes | php /usr/src/b/b.php pm-download devel 
-yes | php /usr/src/b/b.php pm-enable devel
-yes | php /usr/src/b/b.php pm-download demo
-yes | php /usr/src/b/b.php pm-enable demo
-yes | php /usr/src/b/b.php pm-download search_krumo
-yes | php /usr/src/b/b.php pm-enable search_krumo
+php /usr/src/b/b.php -y pm-download devel 
+php /usr/src/b/b.php -y pm-enable devel
+php /usr/src/b/b.php -y pm-download demo
+php /usr/src/b/b.php -y pm-enable demo
+php /usr/src/b/b.php -y pm-download search_krumo
+php /usr/src/b/b.php -y pm-enable search_krumo
 
 #-------------------------- END: Development modules ----------------------
 
