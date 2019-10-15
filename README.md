@@ -1,7 +1,7 @@
 # AltaGrade Development Stack for Backdrop
 This repository helps to quickly get the latest development branch of Backdrop running on Docksal. 
 
-AltaGrade Development Stack comes with *Backdrop Console*, a command line utility for Backdrop CMS developers aimed at speeding up your development cycles.
+AltaGrade Development Stack comes with *Backdrop Console* installed by default, a command line utility for Backdrop CMS developers aimed at speeding up your development cycles.
 
 ## Requirements
 
