@@ -54,10 +54,9 @@ site_install ()
 {
 	cd $DOCROOT_PATH
 	
-	# Every Docksal container now includes ~/.drush/backdrop by default so no need for these lines.
-	# echo "Downloading Backdrop Drush Commands..."
-	# sudo rm -rf ~/.drush/backdrop
-	# sudo git clone https://github.com/backdrop-contrib/drush.git ~/.drush/backdrop > /dev/null
+	echo "Downloading Backdrop Drush Commands..."
+	sudo rm -rf ~/.drush/backdrop
+	sudo git clone https://github.com/backdrop-contrib/drush.git ~/.drush/backdrop > /dev/null
 
 	 drush si standard \
 	 -y \
@@ -109,9 +108,9 @@ time site_install
 #-------------------------- Development modules ---------------------------
 
 cd $DOCROOT_PATH
-drush dl devel && drush en devel
-drush dl demo && drush en demo
-drush dl search_krumo && drush en search_krumo
+drush -y dl devel && drush -y en devel
+drush -y dl demo && drush -y en demo
+drush -y dl search_krumo && drush -y en search_krumo
 
 #-------------------------- END: Development modules ----------------------
 
