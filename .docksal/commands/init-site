@@ -55,6 +55,7 @@ site_install ()
 	cd $DOCROOT_PATH
 
 	echo "Downloading Backdrop Drush Commands..."
+	sudo rm -rf ~/.drush/backdrop
 	sudo git clone https://github.com/backdrop-contrib/drush.git ~/.drush/backdrop > /dev/null
 
 	 drush si standard \
