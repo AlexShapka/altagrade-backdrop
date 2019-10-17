@@ -53,10 +53,11 @@ fix_permissions ()
 site_install ()
 {
 	cd $DOCROOT_PATH
-
-	echo "Downloading Backdrop Drush Commands..."
-	sudo rm -rf ~/.drush/backdrop
-	sudo git clone https://github.com/backdrop-contrib/drush.git ~/.drush/backdrop > /dev/null
+	
+	# Every Docksal container now includes ~/.drush/backdrop by default so no need for these lines.
+	# echo "Downloading Backdrop Drush Commands..."
+	# sudo rm -rf ~/.drush/backdrop
+	# sudo git clone https://github.com/backdrop-contrib/drush.git ~/.drush/backdrop > /dev/null
 
 	 drush si standard \
 	 -y \
@@ -97,7 +98,6 @@ echo "alias bacon='php /usr/src/b/b.php'" >> ~/.bashrc
 source ~/.bashrc
 #--------------------- END: Installing Backdrop Console -------------------
 
-
 #------------------------------- Execution --------------------------------
 
 # Project initialization steps
@@ -109,14 +109,9 @@ time site_install
 #-------------------------- Development modules ---------------------------
 
 cd $DOCROOT_PATH
-php /usr/src/b/b.php -y pm-download devel 
-php /usr/src/b/b.php -y pm-download demo
-php /usr/src/b/b.php -y pm-download search_krumo
-
-cd $DOCROOT_PATH
-php /usr/src/b/b.php -y pm-enable devel
-php /usr/src/b/b.php -y pm-enable demo
-php /usr/src/b/b.php -y pm-enable search_krumo
+drush dl devel && drush en devel
+drush dl demo && drush en demo
+drush dl search_krumo && drush en search_krumo
 
 #-------------------------- END: Development modules ----------------------
 
