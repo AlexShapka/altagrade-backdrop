@@ -82,10 +82,18 @@ site_install ()
 
 #-------------------------- END: Functions --------------------------------
 
+#-------------------------- Preparing bash --------------------------------
+
+sed -i 's/#force_color_prompt=yes/force_color_prompt=yes/g' ~/.bashrc
+sed -i 's/#alias /alias /g' ~/.bashrc
+source  ~/.bashrc
+
+#-------------------------- END: Preparing bash ---------------------------
+
 #--------------------- Installing Backdrop Console ------------------------
 echo "Installing Backdrop Console ..."
 sudo git clone https://github.com/backdrop-contrib/b.git /usr/src/b
-echo "alias b='php /usr/src/b/b.php'" >> ~/.bashrc
+echo "alias bacon='php /usr/src/b/b.php'" >> ~/.bashrc
 source ~/.bashrc
 #--------------------- END: Installing Backdrop Console -------------------
 
@@ -97,14 +105,6 @@ fix_permissions
 time site_install
 
 #-------------------------- END: Execution --------------------------------
-
-#-------------------------- Preparing bash --------------------------------
-
-sed -i 's/#force_color_prompt=yes/force_color_prompt=yes/g' ~/.bashrc
-sed -i 's/#alias /alias /g' ~/.bashrc
-source  ~/.bashrc
-
-#-------------------------- END: Preparing bash ---------------------------
 
 #-------------------------- Development modules ---------------------------
 
