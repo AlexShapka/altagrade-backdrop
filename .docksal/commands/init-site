@@ -90,6 +90,12 @@ sed -i 's/#alias /alias /g' ~/.bashrc
 
 #-------------------------- END: Preparing bash ---------------------------
 
+#--------------------- Installing Drop ------------------------------------
+echo "Installing Drop ..."
+sudo git clone https://github.com/backdrop-contrib/drop.git /usr/src/drop
+sudo ln -s /usr/src/drop/drop /usr/local/bin/drop
+#--------------------- END: Installing Drop -------------------------------
+
 #--------------------- Installing Backdrop Console ------------------------
 echo "Installing Backdrop Console ..."
 sudo git clone https://github.com/backdrop-contrib/b.git /usr/src/b
