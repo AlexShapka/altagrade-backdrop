@@ -1,7 +1,7 @@
-# AltaGrade Development Stack for Backdrop
-This repository helps to quickly get the latest development branch of Backdrop running on Docksal. 
+# AltaGrade Developer Stack for Backdrop
+This repository helps to quickly get Backdrop running on Docksal, with the most useful developer modules enabled by default.
 
-AltaGrade Development Stack comes with **Drop** (https://github.com/backdrop-contrib/drop) installed by default, a command line utility for Backdrop CMS developers aimed at speeding up your development cycles.
+AltaGrade Developer Stack comes with **Drop** (https://github.com/backdrop-contrib/drop) installed by default, a command line utility for Backdrop CMS developers aimed at speeding up your development cycles.
 
 ## Requirements
 
@@ -52,6 +52,15 @@ AltaGrade Development Stack is deployed with the following software versions by 
 - Apache 2.4
 - MySQL 5.6
 - PHP 7.2
+
+## Developer modules
+
+The following developer modules are installed and enabled by default:
+
+drush -y dl devel && drush -y en devel
+drush -y dl demo && drush -y en demo
+drush -y dl search_krumo && drush -y en search_krumo
+drush -y dl coder_upgrade && drush -y en coder_upgrade
 
 ## Trobleshooting
 
