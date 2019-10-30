@@ -117,6 +117,7 @@ cd $DOCROOT_PATH
 drush -y dl devel && drush -y en devel
 drush -y dl demo && drush -y en demo
 drush -y dl search_krumo && drush -y en search_krumo
+drush -y dl coder_upgrade && drush -y en coder_upgrade
 
 #-------------------------- END: Development modules ----------------------
 
