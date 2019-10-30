@@ -99,7 +99,7 @@ sudo ln -s /usr/src/drop/drop /usr/local/bin/drop
 #--------------------- Installing Backdrop Console ------------------------
 echo "Installing Backdrop Console ..."
 sudo git clone https://github.com/backdrop-contrib/b.git /usr/src/b
-echo "alias bacon='php /usr/src/b/b.php'" >> ~/.bashrc
+echo "alias b='php /usr/src/b/b.php'" >> ~/.bashrc
 source ~/.bashrc
 #--------------------- END: Installing Backdrop Console -------------------
 
