@@ -24,7 +24,7 @@ cd your-new-project
 git clone https://github.com/backdrop/backdrop.git docroot
 ```
 
-- Finally, run the installation scipt:
+- Finally, run the installation script:
 ```
 ./init
 ```
