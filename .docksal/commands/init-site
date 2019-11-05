@@ -114,10 +114,10 @@ time site_install
 #-------------------------- Development modules ---------------------------
 
 cd $DOCROOT_PATH
-drush -y dl devel && drush -y en devel
-drush -y dl demo && drush -y en demo
-drush -y dl search_krumo && drush -y en search_krumo
-drush -y dl coder_upgrade && drush -y en coder_upgrade
+drop -y dl devel && drop -y en devel
+drop -y dl demo && drop -y en demo
+drop -y dl search_krumo && drop -y en search_krumo
+drop -y dl coder_upgrade && drop -y en coder_upgrade
 
 #-------------------------- END: Development modules ----------------------
 
