@@ -118,6 +118,7 @@ drop -y dl devel && drop -y en devel
 drop -y dl demo && drop -y en demo
 drop -y dl search_krumo && drop -y en search_krumo
 drop -y dl coder_upgrade && drop -y en coder_upgrade
+drop -y dl coder_review && drop -y en coder_review
 
 #-------------------------- END: Development modules ----------------------
 
