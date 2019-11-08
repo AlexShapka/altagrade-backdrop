@@ -57,10 +57,10 @@ AltaGrade Development Stack is deployed with the following software versions by 
 
 The following developer modules are installed and enabled by default:
 
-drop -y dl devel && drop -y en devel
-drop -y dl demo && drop -y en demo
-drop -y dl search_krumo && drop -y en search_krumo
-drop -y dl coder_upgrade && drop -y en coder_upgrade
+devel 
+demo 
+search_krumo 
+coder_upgrade 
 
 ## Trobleshooting
 
