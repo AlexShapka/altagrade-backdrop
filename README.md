@@ -65,4 +65,4 @@ The following developer modules are installed and enabled by default:
 
 ## Trobleshooting
 
-Report all errors and issues on https://github.com/altagrade/altagrade-backdrop/issues.
+Report all errors and issues on https://github.com/altagrade/altagrade-backdrop/issues
