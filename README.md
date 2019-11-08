@@ -13,20 +13,16 @@ Docksal is a web-development environment based on Docker for macOS, Windows and 
 ```
 git clone https://github.com/altagrade/altagrade-backdrop.git backdrop
 cd backdrop
+./init
 ```
 
-- If you prefer the development branch over the stable version, then open the `.docksal/commands/init` file, comment out two lines under STABLE and uncomment the git line under DEVELOPMENT as shown below:
+- If you prefer the stable branch over the develpment version, then before running the `./init` command above, open the `.docksal/commands/init` file, uncomment two lines under STABLE and comment out the git line under DEVELOPMENT as shown below:
 ```
 # STABLE
 # BRANCH=`curl -s "https://api.github.com/repos/backdrop/backdrop/releases/latest" | awk -F '"' '/tag_name/{print $4}'`
 # git clone --branch $BRANCH https://github.com/backdrop/backdrop.git docroot
 # DEVELOPMENT
 git clone https://github.com/backdrop/backdrop.git docroot
-```
-
-- Finally, run the installation script:
-```
-./init
 ```
 
 - Go to http://your-new-project.docksal/user, login with username `admin`, password `admin` and start working with your new Backdrop website. 
