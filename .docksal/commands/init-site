@@ -119,6 +119,16 @@ drop -y dl demo && drop -y en demo
 drop -y dl search_krumo && drop -y en search_krumo
 drop -y dl coder_upgrade && drop -y en coder_upgrade
 drop -y dl coder_review && drop -y en coder_review
-
+drop -y dl default_views_config && drop -y en default_views_config
 #-------------------------- END: Development modules ----------------------
+
+#-------------------------- Additional modules ---------------------------
+drop -y dl autologout
+drop -y dl honeypot
+drop -y dl passphrase_policy
+drop -y dl remove_generator
+drop -y dl session_limit
+#-------------------------- END: Additional modules ----------------------
+
+
 
