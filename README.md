@@ -59,6 +59,16 @@ The following developer modules are installed and enabled by default:
 - Coder Upgrade 
 - Coder Review
 
+## Additional modules
+
+The following modules are downloaded and recommended for production sites:
+
+- Remove Generator
+- Honeypot
+- Session Limit
+- Passphrase Policy
+- Autologout
+
 ## Trobleshooting
 
 Report all errors and issues on https://github.com/altagrade/altagrade-backdrop/issues
