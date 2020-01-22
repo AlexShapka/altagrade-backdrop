@@ -1,7 +1,7 @@
 # AltaGrade Developer Stack for Backdrop
 This repository helps to quickly get Backdrop running on Docksal, with the most useful developer modules enabled by default.
 
-AltaGrade Developer Stack comes with **Drop** (https://github.com/backdrop-contrib/drop) installed by default, a command line utility for Backdrop CMS developers aimed at speeding up your development cycles.
+AltaGrade Developer Stack comes with **Brush** (https://github.com/backdrop-contrib/brush) installed by default, a command line utility for Backdrop CMS developers aimed at speeding up your development cycles.
 
 ## Requirements
 
