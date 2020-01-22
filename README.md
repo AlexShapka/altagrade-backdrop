@@ -37,7 +37,7 @@ git clone https://github.com/backdrop/backdrop.git docroot
 
 You can  manage your Backdrop website on command line using:
 
-- Drop (https://github.com/backdrop-contrib/drop)
+- Brush (https://github.com/backdrop-contrib/brush)
 - Backdrop Console (https://backdropcms.org/project/b) 
 - Drush (https://backdropcms.org/project/drush).
 
