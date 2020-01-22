@@ -54,17 +54,26 @@ site_install ()
 {
 	cd $DOCROOT_PATH
 	
-	echo "Downloading Backdrop Drush Commands..."
-	sudo rm -rf ~/.drush/backdrop
-	sudo git clone https://github.com/backdrop-contrib/drush.git ~/.drush/backdrop > /dev/null
+	#--------------------- Installing Brush ------------------------------------
+	echo "Installing Brush ..."
+	sudo git clone https://github.com/backdrop-contrib/brush.git /usr/src/brush
+	sudo ln -s /usr/src/brush/brush /usr/local/bin/brush
+	#--------------------- END: Installing Brush -------------------------------
 
-	 drush si standard \
+	brush si standard \
 	 -y \
 	 --site-name='AltaGrade Developer Stack' \
 	 --db-url='mysqli://user:user@db/default' \
 	 --account-mail="admin@example.com" \
 	 --account-name="admin" \
 	 --account-pass="admin" || true
+	 
+	brush upwd admin --password=admin > /dev/null
+	 
+	echo "Downloading Backdrop Drush Commands..."
+	sudo rm -rf ~/.drush/backdrop
+	sudo git clone https://github.com/backdrop-contrib/drush.git ~/.drush/backdrop
+
 
 	# Alternative way to switch to until 
 	# https://github.com/backdrop-contrib/drush/issues/195 is resolved.
@@ -78,7 +87,7 @@ site_install ()
   	# --site-name='AltaGrade Developer Stack' > /dev/null 2>&1 &
 
 	# Currently a way to set password at runtime with drush site-install
-	drush upwd admin --password=admin > /dev/null
+	# drush upwd admin --password=admin > /dev/null
 }
 
 #-------------------------- END: Functions --------------------------------
@@ -89,12 +98,6 @@ sed -i 's/#force_color_prompt=yes/force_color_prompt=yes/g' ~/.bashrc
 sed -i 's/#alias /alias /g' ~/.bashrc
 
 #-------------------------- END: Preparing bash ---------------------------
-
-#--------------------- Installing Drop ------------------------------------
-echo "Installing Drop ..."
-sudo git clone https://github.com/backdrop-contrib/drop.git /usr/src/drop
-sudo ln -s /usr/src/drop/drop /usr/local/bin/drop
-#--------------------- END: Installing Drop -------------------------------
 
 #--------------------- Installing Backdrop Console ------------------------
 echo "Installing Backdrop Console ..."
@@ -114,20 +117,20 @@ time site_install
 #-------------------------- Development modules ---------------------------
 
 cd $DOCROOT_PATH
-drop -y dl devel && drop -y en devel
-drop -y dl demo && drop -y en demo
-drop -y dl search_krumo && drop -y en search_krumo
-drop -y dl coder_upgrade && drop -y en coder_upgrade
-drop -y dl coder_review && drop -y en coder_review
-drop -y dl default_views_config && drop -y en default_views_config
+brush -y dl devel && brush -y en devel
+brush -y dl demo && brush -y en demo
+brush -y dl search_krumo && brush -y en search_krumo
+brush -y dl coder_upgrade && brush -y en coder_upgrade
+brush -y dl coder_review && brush -y en coder_review
+brush -y dl default_views_config && brush -y en default_views_config
 #-------------------------- END: Development modules ----------------------
 
 #-------------------------- Additional modules ---------------------------
-drop -y dl autologout
-drop -y dl honeypot
-drop -y dl passphrase_policy
-drop -y dl remove_generator
-drop -y dl session_limit
+brush -y dl autologout
+brush -y dl honeypot
+brush -y dl passphrase_policy
+brush -y dl remove_generator
+brush -y dl session_limit
 #-------------------------- END: Additional modules ----------------------
 
 
