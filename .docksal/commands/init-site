@@ -56,25 +56,22 @@ site_install ()
 	
 	#--------------------- Installing Brush ------------------------------------
 	echo "Installing Brush ..."
-	sudo git clone https://github.com/backdrop-contrib/brush.git /usr/src/brush
-	sudo ln -s /usr/src/brush/brush /usr/local/bin/brush
+	sudo git clone https://github.com/backdrop-contrib/brush.git /var/www/brush
+	sudo ln -s /var/www/brush/brush /usr/local/bin/brush
 	#--------------------- END: Installing Brush -------------------------------
+	 
+	echo "Downloading Backdrop Drush Commands..."
+	sudo rm -rf ~/.drush/backdrop
+	sudo git clone https://github.com/backdrop-contrib/drush.git ~/.drush/backdrop
 
-	brush si standard \
+	drush si standard \
 	 -y \
 	 --site-name='AltaGrade Developer Stack' \
 	 --db-url='mysqli://user:user@db/default' \
 	 --account-mail="admin@example.com" \
 	 --account-name="admin" \
 	 --account-pass="admin" || true
-	 
-	brush upwd admin --password=admin > /dev/null
-	 
-	echo "Downloading Backdrop Drush Commands..."
-	sudo rm -rf ~/.drush/backdrop
-	sudo git clone https://github.com/backdrop-contrib/drush.git ~/.drush/backdrop
-
-
+	
 	# Alternative way to switch to until 
 	# https://github.com/backdrop-contrib/drush/issues/195 is resolved.
 	# cd $DOCROOT_PATH
