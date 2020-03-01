@@ -130,5 +130,8 @@ brush -y dl remove_generator
 brush -y dl session_limit
 #-------------------------- END: Additional modules ----------------------
 
-
+#----------------------- Additional Packages -------------------------
+sudo apt-get update 
+sudo apt-get install mlocate locate
+sudo updatedb
 
