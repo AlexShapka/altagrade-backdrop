@@ -21,6 +21,12 @@ echo-green () { echo -e "${green}$1${NC}"; }
 echo-green-bg () { echo -e "${green_bg}$1${NC}"; }
 echo-yellow () { echo -e "${yellow}$1${NC}"; }
 
+#----------------------- Additional Packages -------------------------
+sudo pear channel-update pear.php.net
+sudo pear install PHP_CodeSniffer
+sudo apt-get update 
+sudo apt-get install mlocate locate
+sudo updatedb
 #-------------------------- Execution --------------------------------
 
 # Stack initialization
