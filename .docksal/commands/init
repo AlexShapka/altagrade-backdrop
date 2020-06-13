@@ -41,10 +41,8 @@ echo-green "Downloading Backdrop ..."
 # BRANCH=`curl -s "https://api.github.com/repos/backdrop/backdrop/releases/latest" | awk -F '"' '/tag_name/{print $4}'`
 # git clone --branch $BRANCH https://github.com/backdrop/backdrop.git docroot
 # DEVELOPMENT
-# git clone https://github.com/backdrop/backdrop.git docroot
+git clone https://github.com/backdrop/backdrop.git docroot
 
-# Working on https://github.com/backdrop/backdrop-issues/issues/4197
-git clone https://github.com/altagrade/backdrop.git docroot
 
 # Site initialization
 echo -e "${green_bg} Step 2 ${NC}${green} Initializing site...${NC}"
