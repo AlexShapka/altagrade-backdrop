@@ -1,4 +1,4 @@
-# Altagrade stack
+# AltaGrade stack
 #
 # - Apache 2.4
 # - MySQL 5.6
@@ -38,10 +38,10 @@ services:
     #depends_on:
       #- web
 
-  #memcached:
-    #extends:
-     #file: ${HOME}/.docksal/stacks/services.yml
-     #service: memcached
+  memcached:
+    extends:
+     file: ${HOME}/.docksal/stacks/services.yml
+     service: memcached
 
   # http(s)://solr.VIRTUAL_HOST/solr
   #solr:
