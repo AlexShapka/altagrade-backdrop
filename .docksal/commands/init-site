@@ -64,27 +64,27 @@ site_install ()
 	sudo rm -rf ~/.drush/backdrop
 	sudo git clone https://github.com/backdrop-contrib/drush.git ~/.drush/backdrop
 
-	brush si standard \
-	 -y \
-	 --site-name='AltaGrade Developer Stack' \
-	 --db-url='mysqli://user:user@db/default' \
-	 --account-mail="admin@example.com" \
-	 --account-name="admin" \
-	 --account-pass="admin" || true
+	# drush si standard \
+	# -y \
+	# --site-name='AltaGrade Developer Stack' \
+	# --db-url='mysqli://user:user@db/default' \
+	# --account-mail="admin@example.com" \
+	# --account-name="admin" \
+	# --account-pass="admin" || true
 	
 	# Alternative way to switch to until 
 	# https://github.com/backdrop-contrib/drush/issues/195 is resolved.
-	# cd $DOCROOT_PATH
-	# ./core/scripts/install.sh \
-  	# --db-url='mysql://user:user@db/default' \
-	# --account-mail="admin@example.com" \
-	# --account-name="admin" \
-	# --account-pass="admin" \
-	# --site-mail="admin@example.com" \
-  	# --site-name='AltaGrade Developer Stack' > /dev/null 2>&1 &
+	cd $DOCROOT_PATH
+	./core/scripts/install.sh \
+  	--db-url='mysql://user:user@db/default' \
+	--account-mail="admin@example.com" \
+	--account-name="admin" \
+	--account-pass="admin" \
+	--site-mail="admin@example.com" \
+  	--site-name='AltaGrade Developer Stack' > /dev/null 2>&1 &
 
 	# Currently a way to set password at runtime with drush site-install
-	brush upwd admin --password=admin > /dev/null
+	# brush upwd admin --password=admin > /dev/null
 }
 
 #-------------------------- END: Functions --------------------------------
