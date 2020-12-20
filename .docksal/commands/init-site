@@ -115,12 +115,12 @@ time site_install
 #-------------------------- Development modules ---------------------------
 
 cd $DOCROOT_PATH
-brush -y en devel -v
-brush -y en demo -v
-brush -y en search_krumo -v
-brush -y en coder_upgrade -v
-brush -y en coder_review -v
-brush -y en default_views_config -v
+brush -y en devel
+brush -y en demo
+brush -y en search_krumo
+brush -y en coder_upgrade
+brush -y en coder_review
+brush -y en default_views_config
 #-------------------------- END: Development modules ----------------------
 
 #-------------------------- Additional modules ---------------------------
