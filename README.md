@@ -29,7 +29,7 @@ git clone https://github.com/backdrop/backdrop.git docroot
 
 ## Docksal tools
 
-- MailHog is a cool way of catching all messages sent out from your website while developing it. To test it just enable the contact module with `drop en contact`, send a test message using the http://your-new-project.docksal/contact form and check your MailHog at http://mail.your-new-project.docksal.
+- MailHog is a cool way of catching all messages sent out from your website while developing it. To test it just enable the contact module with `brush en contact`, send a test message using the http://your-new-project.docksal/contact form and check your MailHog at http://mail.your-new-project.docksal.
 
 - phpMyAdmin is located at http://pma.your-new-project.docksal.
 
