@@ -64,7 +64,7 @@ site_install ()
 	sudo rm -rf ~/.drush/backdrop
 	sudo git clone https://github.com/backdrop-contrib/drush.git ~/.drush/backdrop
 
-	drush si standard \
+	brush si standard \
 	 -y \
 	 --site-name='AltaGrade Developer Stack' \
 	 --db-url='mysqli://user:user@db/default' \
@@ -84,7 +84,7 @@ site_install ()
   	# --site-name='AltaGrade Developer Stack' > /dev/null 2>&1 &
 
 	# Currently a way to set password at runtime with drush site-install
-	drush upwd admin --password=admin > /dev/null
+	brush upwd admin --password=admin > /dev/null
 }
 
 #-------------------------- END: Functions --------------------------------
