@@ -82,10 +82,6 @@ site_install ()
 	--account-pass="admin" \
 	--site-mail="admin@example.com" \
   	--site-name='AltaGrade Developer Stack'
-	
-	# > /dev/null 2>&1 &
-	# Currently a way to set password at runtime with drush site-install
-	# brush upwd admin --password=admin > /dev/null
 }
 
 #-------------------------- END: Functions --------------------------------
@@ -115,8 +111,8 @@ time site_install
 #-------------------------- Development modules ---------------------------
 
 cd $DOCROOT_PATH
+brush -y en shortcut
 brush -y en devel
-brush -y en demo
 brush -y en search_krumo
 brush -y en coder_upgrade
 brush -y en coder_review
@@ -132,7 +128,7 @@ brush -y dl session_limit
 #-------------------------- END: Additional modules ----------------------
 
 #----------------------- Additional Packages -------------------------
-sudo apt-get update 
-sudo apt-get install mlocate locate
-sudo updatedb
+# sudo apt-get update 
+# sudo apt-get install mlocate locate
+# sudo updatedb
 
